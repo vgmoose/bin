@@ -1,0 +1,10 @@
+~/colors/col1.sh
+mv ~/colors/col1.sh ~/colors/tmpcolor.sh
+mv ~/colors/col2.sh ~/colors/col1.sh
+mv ~/colors/col3.sh ~/colors/col2.sh
+mv ~/colors/col4.sh ~/colors/col3.sh
+mv ~/colors/col5.sh ~/colors/col4.sh
+mv ~/colors/col6.sh ~/colors/col5.sh
+mv ~/colors/col7.sh ~/colors/col6.sh
+mv ~/colors/col8.sh ~/colors/col7.sh
+mv ~/colors/tmpcolor.sh ~/colors/col8.sh

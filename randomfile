@@ -1,0 +1,6 @@
+location=$1
+total=`ls "${location:=.}" | wc -l`
+pick=`expr $RANDOM % $total + 1`
+name=`ls "${location:=.}" | head -n $pick | tail -n 1`
+echo $name
+open "$name"

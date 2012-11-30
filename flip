@@ -1,0 +1,6 @@
+if [ $((RANDOM%2)) -eq 0 ]
+then
+echo "Get it"
+else
+echo "Don't get it"
+fi

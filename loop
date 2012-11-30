@@ -1,0 +1,15 @@
+i=0
+x=0
+if [ "$2" ]
+	then x=$2
+fi
+if [ $x == 0 ]
+	then i=-1
+fi
+while [ $i -lt $x ]
+do
+	$1
+	if [ $x != 0 ]
+		then i=$(( $i + 1))
+	fi
+done

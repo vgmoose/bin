@@ -1,0 +1,15 @@
+#!/bin/bash 
+STR=$(curl checkip.rickyayoub.com)
+
+echo "<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Redirecting...</title>
+<meta http-equiv='REFRESH'
+content='0;url=http://$STR/'></HEAD>
+<BODY>
+</BODY>
+</HTML>" >> ~/tempfileip
+
+scp ~/tempfileip rickayo0@rickyayoub.com:/home/rickayo0/public_html/me/index.html
+rm ~/tempfileip

@@ -1,0 +1,7 @@
+if [ "$#" -eq "0" ]
+then
+THING="You asked me to notify you, so here I am!"
+else
+THING=$@
+fi
+terminal-notifier -message "$THING" -title Terminal &>/dev/null

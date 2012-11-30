@@ -1,0 +1,2 @@
+THISCLIP=$(pbpaste)
+terminal-notifier -title "Smart Clipboard" -message "$THISCLIP" -execute "echo $THISCLIP | pbcopy"

@@ -1,0 +1,4 @@
+#!/bin/tcsh
+setenv __CF_USER_TEXT_ENCODING 0x0:0:0
+/System/Library/CoreServices/WindowServer&
+/System/Library/CoreServices/loginwindow.app/Contents/MacOS/loginwindow

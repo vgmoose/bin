@@ -1,0 +1,7 @@
+if [ -a "$1" ]
+then
+	open -a /Applications/Xcode.app $1
+else
+	echo `date` > $1
+	open -a /Applications/Xcode.app $1
+fi
