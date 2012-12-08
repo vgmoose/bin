@@ -1,0 +1,40 @@
+binstall - Installs executables to /usr/local/bin
+  usage: sudo binstall <file>
+
+cycle	- Changes the background color of the OS X Terminal using AppleScript
+  usage: cycle
+
+delete - Doesn't do anything, made as a joke
+  usage: delete
+
+fixcolors	- Sets up the AppleScripts for the cycle command
+  usage: fixcolors
+
+flip - Flips a coin, heads or tails
+  usage: flip
+
+ip - Returns the current external IP address
+  usage: ip
+
+loop - Easily loops commands, no time specified means loop forever
+  usage: loop <command> {number of times}
+
+notify - Notifies on OS X using terminal-notifier, but with more convenient syntax
+  usage: notify {Message}
+
+randomfile - Opens up a random file in the current directory
+  usage: randomfile
+
+smartclip	- Works with terminal-notifier to send a notification of the current 
+
+spoof	- Wrapper script for spoof.pl, spoofs a random MAC address on OS X
+  usage: spoof {desired MAC address}
+
+startaqua	- Runs the OS X window manager
+  usage: startaqua
+
+updateip	- Updates my website with my computer's latest IP
+  usage: updateip
+
+xcode - Wrapper script for open that launches xcode on the current file in OS X
+  usage: xcode <name of file>
