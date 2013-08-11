@@ -1,0 +1,1 @@
+cd ~/Screenshots; scp -q "`ls -t | head -1`" rickayo0@rickyayoub.com:public_html/ups/; echo "http://rickyayoub.com/ups/`ls -t | head -1`" | sed 's/ /%20/g' | pbcopy; echo "http://rickyayoub.com/ups/`ls -t | head -1`" | sed 's/ /%20/g' 

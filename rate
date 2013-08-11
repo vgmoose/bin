@@ -1,0 +1,19 @@
+e=$(expr $2 - $1)
+i=0
+o=""
+
+while [ $i -lt $1 ]
+do
+    o=$o"★"
+    i=$(( $i + 1))
+done
+
+i=0
+
+while [ $i -lt $e ]
+do
+    o=$o"☆"
+    i=$(( $i + 1))
+done
+
+echo $o" ("$1"/"$2")"
