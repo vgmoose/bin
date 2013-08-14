@@ -1,2 +1,2 @@
 scp -q "$1" rickayo0@rickyayoub.com:public_html/ups/; echo "http://rickyayoub.com/ups/`basename "$1"`" | sed 's/ /%20/g' | pbcopy; echo "http://rickyayoub.com/ups/`basename "$1"`" | sed 's/ /%20/g' 
-notify `basename "$1"` uploaded, and on clipboard
+/usr/local/bin/notify `basename "$1"` uploaded, and on clipboard
