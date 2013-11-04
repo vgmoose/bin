@@ -1,2 +1,17 @@
-scp -qr "$1" rickayo0@rickyayoub.com:public_html/ups/; echo "http://rickyayoub.com/ups/`basename "$1"`" | sed 's/ /%20/g' | pbcopy; echo "http://rickyayoub.com/ups/`basename "$1"`" | sed 's/ /%20/g' 
-/usr/local/bin/notify `basename "$1"` uploaded, and on clipboard
+md5=`md5 -q "$1"`
+hash=`echo "$md5" |cut -c1-6`
+
+filename=$(basename "$1")
+extension="${filename##*.}"
+
+url="$hash.$extension"
+
+scp -qr "$1" rickayo0@rickyayoub.com:public_html/ups/
+ssh -x rickayo0@rickyayoub.com "ln -s '../../ups/$filename' 'www/vgmoose/VGMooses_Backpack/$url'"
+
+url="http://vgmoose.com/$url"
+
+echo $url
+echo $url | pbcopy
+
+/usr/local/bin/notify "$filename uploaded, and on clipboard as $url"
