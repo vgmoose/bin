@@ -1,0 +1,2 @@
+sudo diskutil erasevolume HFS+ 'RAM Disk' `hdiutil attach -nomount ram://$[$1*2048]`
+
