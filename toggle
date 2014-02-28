@@ -1,0 +1,13 @@
+#!/bin/bash
+/usr/libexec/PlistBuddy -c "print :persistent-others:2:tile-data" ~/Library/Preferences/com.apple.dock.plist 2> /tmp/errored > /dev/null
+
+if [[ -s /tmp/errored ]] ; then
+    /usr/libexec/PlistBuddy -c "copy :persistent-others:2:tile-hidden :persistent-others:2:tile-data" ~/Library/Preferences/com.apple.dock.plist &>/dev/null
+    /usr/libexec/PlistBuddy -c "delete :persistent-others:2:tile-hidden" ~/Library/Preferences/com.apple.dock.plist &>/dev/null
+else
+    /usr/libexec/PlistBuddy -c "copy :persistent-others:2:tile-data :persistent-others:2:tile-hidden" ~/Library/Preferences/com.apple.dock.plist &>/dev/null
+    /usr/libexec/PlistBuddy -c "delete :persistent-others:2:tile-data" ~/Library/Preferences/com.apple.dock.plist &>/dev/null
+fi ;
+
+defaults read com.apple.dock &>/dev/null
+killall Dock
