@@ -1,2 +1,2 @@
-sudo cp $1 /usr/local/bin
-sudo chmod 777 /usr/local/bin/$1
+cp $1 /usr/local/bin
+chmod +x "/usr/local/bin/$(basename $1)"
